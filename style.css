@@ -198,3 +198,53 @@ li.products:hover > a {
     background-color: #2c71b8;
     color: white;
 }
+.filter {
+    width: 270px;
+    height: 842px;
+    font-size: 21px;
+    background-color: rgba(86, 141, 198, 0.80);
+    border: 1px solid white;
+    color: white;
+}
+.breadcrumb {
+    font-size: 14px;
+    font-weight: 300;
+    color: #96b8dc;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+.breadcrumb > a {
+    text-decoration: none;
+    color: #96b8dc;
+}
+.main-h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 50px;
+}
+.items::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.items > li {
+    float: left;
+}
+[class*="item-"] {
+    display: block;
+    border: 1px solid white;
+    background-color: #2c71b8;
+    color: white;
+    width: 268px;
+    height: 650px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.items > li:nth-child(3n+3) {
+    margin-right: 0;
+}
+.item-1 > a > img {
+    width: 265px;
+    height: 180px;
+}
