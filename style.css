@@ -196,3 +196,30 @@ li.products:hover > a {
     background-color: #2c71b8;
     color: white;
 }
+.filter {
+    width: 270px;
+    height: 840px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.20);
+    border-right: 1px solid white;
+}
+.breadcrumbs {
+    margin: 30px 15px 0 30px;
+}
+.breadcrumbs > p > a, .breadcrumbs > p > span {
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+}
+.breadcrumbs > p a::after {
+    content: url(images/arrow\ right\ \(16x16white\).png);
+    vertical-align: middle;
+    opacity: 0.5;
+}
+.breadcrumbs > p > a:hover {
+    text-decoration: underline;
+}
+.breadcrumbs > p > span:hover {
+    text-decoration: none;
+}
