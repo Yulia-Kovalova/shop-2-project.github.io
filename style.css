@@ -30,13 +30,13 @@ body {
     width: 25%;
 }
 .col-md-4 {
-    width: 33.3%;
+    width: 33.33333%;
 }
 .col-md-6 {
     width: 50%;
 }
 .col-md-8 {
-    width: 66.6%;
+    width: 66.66666%;
 }
 .col-md-9 {
     width: 75%;
@@ -164,6 +164,7 @@ body {
     height: 316px;
     background-color: #2c71b8;
     margin-left: -1px;
+    z-index: 10;
 }
 .submenu > li {
     padding: 0;
@@ -210,7 +211,7 @@ li.products:hover > a {
     border-right: 1px solid white;
 }
 .breadcrumbs {
-    margin: 30px 0 20px 15px;
+    margin: 30px 0 15px;
 }
 .breadcrumbs > p > a, .breadcrumbs > p > span {
     color: rgba(255, 255, 255, 0.50);
@@ -230,24 +231,49 @@ li.products:hover > a {
     text-decoration: none;
 }
 .h1 {
-    margin: 0px 0 35px 15px;
+    margin: 0px 0 35px;
     color: white;
     font-size: 48px;
     font-weight: 700;
 }
+.sort {
+    color: white;
+    font-size: 21px;
+    font-weight: 300;
+}
 .product {
     width: 270px;
     height: 655px;
-    margin: 15px;
-    border: 1px solid white;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(44, 113, 184, 0.75);
 }
+.all-images {
+    background-color: rgba(255, 255, 255, 0.75)
+}
+.product-image, .product2-image, .product3-image, .product4-image, .product5-image, .product6-image, .product7-image, .product8-image, .product9-image {
+    position: relative;
+}
 .product-image > a > img {
-    background-color: rgba(255, 255, 255, 0.75);
     padding: 44px 83px;
 }
-.product-image {
-    position: relative;
+.product2-image > a > img, .product8-image > a > img {
+    padding: 47px 83px;
+}
+.product3-image > a > img, .product9-image > a > img {
+    padding: 38px 106px;
+}
+.product4-image > a > img {
+    padding: 60px 83px;
+}
+.product5-image > a > img {
+    padding: 40px 104px;
+}
+.product6-image > a > img {
+    padding: 40px 107px;
+}
+.product7-image > a > img {
+    padding: 38px 100px;
 }
 .lightbox-and-like {
     width: 30px;
@@ -299,7 +325,7 @@ li.products:hover > a {
 .product-features-type, .product-features-screen_size, .product-features-ram {
     padding-bottom: 15px;
 }
-.product-price > div {
+.product-price > div, .product2-price > div, .product5-price > div, .product8-price > div {
     position: relative;
     left: -15px;
     font-size: 48px;
@@ -311,6 +337,13 @@ li.products:hover > a {
     position: absolute;
     top: 0;
     left: 180px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.product2-price > div > span, .product5-price > div > span, .product8-price > div >span {
+    position: absolute;
+    top: 0;
+    left: 195px;
     font-size: 30px;
     font-weight: 700;
 }
