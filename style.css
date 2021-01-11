@@ -210,7 +210,7 @@ li.products:hover > a {
     border-right: 1px solid white;
 }
 .breadcrumbs {
-    margin: 30px 0 30px 15px;
+    margin: 30px 0 20px 15px;
 }
 .breadcrumbs > p > a, .breadcrumbs > p > span {
     color: rgba(255, 255, 255, 0.50);
@@ -230,8 +230,112 @@ li.products:hover > a {
     text-decoration: none;
 }
 .h1 {
-    margin: 0px 0 60px 15px;
+    margin: 0px 0 35px 15px;
     color: white;
     font-size: 48px;
     font-weight: 700;
+}
+.product {
+    width: 270px;
+    height: 655px;
+    margin: 15px;
+    border: 1px solid white;
+    background-color: rgba(44, 113, 184, 0.75);
+}
+.product-image > a > img {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 44px 83px;
+}
+.product-image {
+    position: relative;
+}
+.lightbox-and-like {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    border: 1px solid #2c71b8;
+    background-position: center center;
+}
+.lightbox {
+    background-image: url(images/square\ blue.png);
+    background-repeat: no-repeat;
+    top: 10px;
+}
+.like {
+    background-image: url(images/heart\ blue.png);
+    background-repeat: no-repeat;
+    top: 50px;
+}
+.lightbox:hover {
+    background-image: url(images/square\ white.png);
+    background-color: #2c71b8;
+}
+.like:hover {
+    background-image: url(images/heart\ white.png);
+    background-color: #2c71b8;
+}
+.product-body {
+    padding: 15px;
+    color: white;
+}
+.product-title {
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.product-description {
+    font-size: 21px;
+    padding-bottom: 15px;
+}
+.product-features {
+    font-size: 21px;
+    padding-bottom: 10px;
+}
+.product-features > div > span {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.product-features-type, .product-features-screen_size, .product-features-ram {
+    padding-bottom: 15px;
+}
+.product-price > div {
+    position: relative;
+    left: -15px;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.product-price > div > span {
+    position: absolute;
+    top: 0;
+    left: 180px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.buttons {
+    text-align: center;
+}
+.button {
+    color: white;
+    width: 210px;
+    height: 50px;
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.more_details {
+    border: 1px solid white;
+    background-color: #2c71b8;
+}
+.add_to_cart {
+    text-align: left;
+    padding-left: 23px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.30);
+    background-image: url(images/white\ cart.png);
+    background-repeat: no-repeat;
+    background-position: right 17px bottom 17px;
 }
