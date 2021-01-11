@@ -339,3 +339,11 @@ li.products:hover > a {
     background-repeat: no-repeat;
     background-position: right 17px bottom 17px;
 }
+.more_details:hover {
+    background-color: rgba(255, 255, 255, 0.30);
+    border: none;
+}
+.add_to_cart:hover {
+    background-color: #2c71b8;
+    border: 1px solid white;
+}
