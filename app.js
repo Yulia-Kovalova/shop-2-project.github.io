@@ -40,7 +40,7 @@ addToCartButtons.forEach(function(key, value) {
 
 //***************** */
 // д/з -> like button
-let likeButton = document.querySelectorAll('.like')
+// let likeButton = document.querySelectorAll('.like')
 // console.log(likeButton);
 
 // метод for
@@ -52,19 +52,111 @@ let likeButton = document.querySelectorAll('.like')
 // }
 
 // метод forEach
-likeButton.forEach(function(key, value) {
-    likeButton[value].addEventListener("click", function likedHeart() {
-        this.style.backgroundImage = "url('images/heart\ white.png')";
-        this.style.backgroundColor = "#2c71b8";
-    });
-});
+// likeButton.forEach(function(key, value) {
+//     likeButton[value].addEventListener("click", function likedHeart() {
+//         this.style.backgroundImage = "url('images/heart\ white.png')";
+//         this.style.backgroundColor = "#2c71b8";
+//     });
+// });
 
 // let likeBackButton = document.getElementsByClassName('like');
-let likeBackButton = document.querySelectorAll('.like');
-// console.log(likeBackButton);
-likeBackButton.forEach(function(key, value) {
-    if (likeBackButton[value].hasAttribute('class="like"')) {
-        likeButton[value].removeEventListener('click', likedHeart());
-    }
-});
+// let likeBackButton = document.querySelectorAll('.like');
+// // console.log(likeBackButton);
+// likeBackButton.forEach(function(key, value) {
+//     if (likeBackButton[value].hasAttribute('class="like"')) {
+//         likeButton[value].removeEventListener('click', likedHeart());
+//     }
+// });
 //не працює
+
+/***************************/
+//Робота на уроці 21 - додавання та забирання like
+
+// let likeBtns = document.querySelectorAll(".like");
+// console.log(likeBtns)
+
+// for(let i =0; i <likeBtns.length; i++) {
+//     likeBtns[i].addEventListener("click",function() {
+//         if(this.classList.contains("liked")) {
+//             this.classList.remove("liked")
+//         } else {
+//             this.classList.add("liked")
+//         }
+//     })
+// }
+
+
+//************************* */
+// Метод classList.toggle
+let likeBtns = document.querySelectorAll(".like");
+// console.log(likeBtns)
+
+for(let i =0; i <likeBtns.length; i++) {
+    likeBtns[i].addEventListener("click",function() {
+        this.classList.toggle("liked")
+});
+};
+
+
+
+//************************* */
+// Відкривати вікно для More Details
+
+// modal
+// let moreDetailsBtns = document.querySelectorAll(".more_details");
+// console.log(moreDetailsBtns);
+
+// for(let i =0; i < moreDetailsBtns.length; i++) {
+//     moreDetailsBtns[i].addEventListener("click", function() {
+//         this.classList.add("show");
+//     });
+// };
+//не працює
+
+
+// Рішення Людмили Аркавенко
+// let moreDetailsBtns = document.querySelectorAll(".button-more-details");
+// console.log(moreDetailsBtns);
+// let modalWindow = document.querySelector(".modal");
+// for(i=0;i<moreDetailsBtns.length;i++)
+// {
+//     moreDetailsBtns[i].addEventListener('click',function()
+//     {
+//         modalWindow.classList.add("show");
+//     })
+// }
+// let closeModalWindow = document.querySelector(".modal-close-btn");
+// closeModalWindow.addEventListener('click',function()
+// {
+//     modalWindow.classList.remove("show");
+// })
+//не працює
+
+
+//рішення Ярослава через forEach
+let moreDetailsBtns = document.querySelectorAll(".more_details");
+let modal = document.querySelector(".modal");
+let closeBtn = document.querySelector(".close-btn");
+
+moreDetailsBtns.forEach(btn => (
+    btn.addEventListener("click", openModal)
+))
+
+closeBtn.addEventListener("click", closeModal)
+
+function openModal () {
+    modal.classList.add("show");
+    modal.classList.remove("hide");
+}
+
+function closeModal() {
+    modal.classList.add("hide");
+    modal.classList.remove("show");
+}
+
+modal.addEventListener("click", function(e) {
+    console.log(e.target)
+    if(e.target===modal) {
+        closeModal()
+    }
+})
