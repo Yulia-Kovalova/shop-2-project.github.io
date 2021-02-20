@@ -39,7 +39,7 @@ addToCartButtons.forEach(function(key, value) {
 
 
 //***************** */
-// like button
+// д/з -> like button
 let likeButton = document.querySelectorAll('.like')
 // console.log(likeButton);
 
@@ -53,8 +53,18 @@ let likeButton = document.querySelectorAll('.like')
 
 // метод forEach
 likeButton.forEach(function(key, value) {
-    likeButton[value].addEventListener("click", function() {
+    likeButton[value].addEventListener("click", function likedHeart() {
         this.style.backgroundImage = "url('images/heart\ white.png')";
         this.style.backgroundColor = "#2c71b8";
     });
 });
+
+// let likeBackButton = document.getElementsByClassName('like');
+let likeBackButton = document.querySelectorAll('.like');
+// console.log(likeBackButton);
+likeBackButton.forEach(function(key, value) {
+    if (likeBackButton[value].hasAttribute('class="like"')) {
+        likeButton[value].removeEventListener('click', likedHeart());
+    }
+});
+//не працює
