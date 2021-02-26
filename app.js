@@ -31,9 +31,9 @@ let addToCartButtons = document.querySelectorAll(".add_to_cart");
 // })
 //працює! ураааа! :)))
 
-addToCartButtons.forEach(function(key, value) {
-    addToCartButtons[value].addEventListener("click", function() {
-        productsCountEl.textContent = +productsCountEl.textContent +1;
+addToCartButtons.forEach(function (key, value) {
+    addToCartButtons[value].addEventListener("click", function () {
+        productsCountEl.textContent = +productsCountEl.textContent + 1;
     });
 });
 
@@ -91,10 +91,10 @@ addToCartButtons.forEach(function(key, value) {
 let likeBtns = document.querySelectorAll(".like");
 // console.log(likeBtns)
 
-for(let i =0; i <likeBtns.length; i++) {
-    likeBtns[i].addEventListener("click",function() {
+for (let i = 0; i < likeBtns.length; i++) {
+    likeBtns[i].addEventListener("click", function () {
         this.classList.toggle("liked")
-});
+    });
 };
 
 
@@ -144,7 +144,7 @@ moreDetailsBtns.forEach(btn => (
 
 closeBtn.addEventListener("click", closeModal)
 
-function openModal () {
+function openModal() {
     modal.classList.add("show");
     modal.classList.remove("hide");
 }
@@ -154,9 +154,9 @@ function closeModal() {
     modal.classList.remove("show");
 }
 
-modal.addEventListener("click", function(e) {
+modal.addEventListener("click", function (e) {
     console.log(e.target)
-    if(e.target===modal) {
+    if (e.target === modal) {
         closeModal()
     }
 })
@@ -164,14 +164,15 @@ modal.addEventListener("click", function(e) {
 
 // change product quantity
 
-let decrementBtns = document.querySelectorAll(".decrement-button") [0];
-let incrementBtns = document.querySelectorAll(".increment-button") [0];
-let productQuantity = document.querySelectorAll(".product-quantity input") [0];
+let decrementBtns = document.querySelectorAll(".decrement-button");
+let incrementBtns = document.querySelectorAll(".increment-button");
+let productQuantity = document.querySelectorAll(".product-quantity input");
 let currentCount = +productQuantity.value;
 
-console.log(decrementBtns);
-console.log(incrementBtns);
-console.log(productQuantity);
+// console.log(decrementBtns);
+// console.log(incrementBtns);
+// console.log(productQuantity);
+
 
 function toggleButtonState(count) {
     decrementBtns.disabled = count <= 1;
@@ -180,18 +181,22 @@ function toggleButtonState(count) {
 
 toggleButtonState(currentCount);
 
-incrementBtns.addEventListener("click",function() {
-    let currentCount = +productQuantity.value;
-    let nextCount = currentCount + 1;
-    productQuantity.value = nextCount;
+incrementBtns.forEach(btn => {
+    btn.addEventListener("click", function () {
+        let currentCount = +productQuantity.value;
+        let nextCount = currentCount + 1;
+        productQuantity.value = nextCount;
 
-    toggleButtonState(nextCount);
+        toggleButtonState(nextCount);
+    })
 })
 
-decrementBtns.addEventListener("click",function() {
-    let currentCount = +productQuantity.value;
-    let nextCount = currentCount - 1;
-    productQuantity.value = nextCount;
+decrementBtns.forEach(btns => {
+    btns.addEventListener("click", function () {
+        let currentCount = +productQuantity.value;
+        let nextCount = currentCount - 1;
+        productQuantity.value = nextCount;
 
-    toggleButtonState(nextCount);
+        toggleButtonState(nextCount);
+    })
 })
