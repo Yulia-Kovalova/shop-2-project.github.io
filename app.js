@@ -160,3 +160,38 @@ modal.addEventListener("click", function(e) {
         closeModal()
     }
 })
+
+
+// change product quantity
+
+let decrementBtns = document.querySelectorAll(".decrement-button") [0];
+let incrementBtns = document.querySelectorAll(".increment-button") [0];
+let productQuantity = document.querySelectorAll(".product-quantity input") [0];
+let currentCount = +productQuantity.value;
+
+console.log(decrementBtns);
+console.log(incrementBtns);
+console.log(productQuantity);
+
+function toggleButtonState(count) {
+    decrementBtns.disabled = count <= 1;
+    incrementBtns.disabled = count >= 10;
+}
+
+toggleButtonState(currentCount);
+
+incrementBtns.addEventListener("click",function() {
+    let currentCount = +productQuantity.value;
+    let nextCount = currentCount + 1;
+    productQuantity.value = nextCount;
+
+    toggleButtonState(nextCount);
+})
+
+decrementBtns.addEventListener("click",function() {
+    let currentCount = +productQuantity.value;
+    let nextCount = currentCount - 1;
+    productQuantity.value = nextCount;
+
+    toggleButtonState(nextCount);
+})
