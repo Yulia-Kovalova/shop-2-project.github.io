@@ -361,7 +361,7 @@ li.products:hover > a {
 /* Products */
 .product {
     width: 270px;
-    height: 655px;
+    height: 675px;
     margin-bottom: 30px;
     border: 1px solid rgba(255, 255, 255, 0.75);
     background-color: rgba(44, 113, 184, 0.75);
@@ -435,7 +435,6 @@ li.products:hover > a {
 }
 .product-features {
     font-size: 21px;
-    padding-bottom: 10px;
 }
 .product-features > div > span {
     font-weight: 700;
@@ -444,13 +443,18 @@ li.products:hover > a {
 .product-features-type, .product-features-screen_size, .product-features-ram {
     padding-bottom: 15px;
 }
+.product-quantity {
+    padding-bottom: 15px;
+}
+.all-prices {
+    padding-bottom: 20px;
+}
 .product-price > div, .product2-price > div, .product5-price > div, .product8-price > div {
     position: relative;
     left: -15px;
     font-size: 48px;
     font-weight: 700;
     text-align: center;
-    padding-bottom: 25px;
 }
 .product-price > div > span {
     position: absolute;
