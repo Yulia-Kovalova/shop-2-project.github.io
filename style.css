@@ -62,6 +62,11 @@ body {
 .col-md-12 {
     width: 100%;
 }
+
+
+
+/* Header */
+
 .header {
     background-color: rgba(255, 255, 255, 0.75);
     padding: 25px 0;
@@ -224,6 +229,24 @@ li.products:hover > a {
     background-color: #2c71b8;
     color: white;
 }
+
+
+
+/* Main */
+
+/* Slider */
+.slider-block > div {
+    padding: 150px 0;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 30px;
+}
+
+
+/* Filter */
 .filter {
     width: 270px;
     height: 840px;
@@ -296,6 +319,7 @@ li.products:hover > a {
 }
 
 
+/* Breadcrumbs and h1*/
 .breadcrumbs {
     margin: 30px 0 15px;
 }
@@ -322,11 +346,19 @@ li.products:hover > a {
     font-size: 48px;
     font-weight: 700;
 }
+
+
+
+/* Sort */
 .sort {
     color: white;
     font-size: 21px;
     font-weight: 300;
 }
+
+
+
+/* Products */
 .product {
     width: 270px;
     height: 655px;
